@@ -40,7 +40,7 @@ input[class^="btn-"]:hover {
 }
 
 // Backgrounds
-bg {
+.bg {
   &-main {
     background: $main-color;
     color: set-text-color($main-color);

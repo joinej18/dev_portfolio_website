@@ -28,19 +28,19 @@ a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
   background-color: #ffbc00; }
 
-bg-main {
+.bg-main {
   background: #ffbc00;
   color: #fff; }
 
-bg-light {
+.bg-light {
   background: #f4f4f4;
   color: #000; }
 
-bg-dark {
+.bg-dark {
   background: #333;
   color: #fff; }
 
-bg-medium {
+.bg-medium {
   background: #ccc;
   color: #000; }
 

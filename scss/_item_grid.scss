@@ -96,4 +96,12 @@
     opacity: 0.7;
     margin: 0;
   }
+
+  &-category-bottom {
+    background: aqua;
+    width: 50%;
+    height: 5px;
+    margin: auto;
+    border-radius: 35%;
+  }
 }

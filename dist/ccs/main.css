@@ -162,6 +162,12 @@ input[class^="btn-"]:hover {
     font-size: 1.2rem;
     opacity: 0.7;
     margin: 0; }
+  .item-category-bottom {
+    background: aqua;
+    width: 50%;
+    height: 5px;
+    margin: auto;
+    border-radius: 35%; }
 
 * {
   margin: 0;
@@ -185,7 +191,8 @@ h4 {
   text-transform: uppercase; }
 
 img {
-  width: 100%; }
+  width: 100%;
+  size: 1rem; }
 
 #logo {
   width: 70px;
@@ -340,26 +347,107 @@ img {
   #about-c .about-logos img {
     width: 70%; }
 
-#about-d .certificates {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.5rem; }
-  #about-d .certificates ul {
-    list-style: none;
-    margin-top: 1rem;
+#about-d {
+  /* SLIDER */ }
+  #about-d .certificates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5rem; }
+    #about-d .certificates ul {
+      list-style: none;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center; }
+    #about-d .certificates li {
+      font-size: 2rem; }
+    #about-d .certificates p {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 0.5rem; }
+    #about-d .certificates .certs {
+      width: 300px;
+      height: 200px;
+      border-radius: 0; }
+    #about-d .certificates img {
+      width: 75px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 0.5rem; }
+  #about-d .slider {
+    max-width: 70rem;
+    height: 20rem;
+    margin: 30px auto;
+    position: relative;
+    /* IN THE END */
+    overflow: hidden; }
+  #about-d .slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
     display: flex;
-    align-items: center; }
-  #about-d .certificates li {
-    font-size: 2rem; }
-  #about-d .certificates p {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 0.5rem; }
-  #about-d .certificates img {
-    width: 75px;
-    height: 50px;
+    align-items: center;
+    justify-content: center;
+    /* THIS creates the animation! */
+    transition: transform 1s; }
+  #about-d .slide .png {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* THIS creates the animation! */
+    transition: transform 1s; }
+  #about-d .slide > img {
+    /* Only for images that have different size than slide */
+    width: 50%;
+    height: 250px;
+    object-fit: fill; }
+  #about-d .slider__btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: inherit;
+    color: #333;
     border-radius: 50%;
-    margin-right: 0.5rem; }
+    height: 5.5rem;
+    width: 5.5rem;
+    font-size: 3.25rem;
+    cursor: pointer; }
+  #about-d .slider__btn--left {
+    left: 6%;
+    transform: translate(-50%, -50%); }
+  #about-d .slider__btn--right {
+    right: 6%;
+    transform: translate(50%, -50%); }
+  #about-d .dots {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex; }
+  #about-d .dots__dot {
+    border: none;
+    background-color: #b9b9b9;
+    opacity: 0.7;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    margin-right: 1.75rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    /* Only necessary when overlying images */
+    /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */ }
+  #about-d .dots__dot:last-child {
+    margin: 0; }
+  #about-d .dots__dot--active {
+    /* background-color: #fff; */
+    background-color: #888;
+    opacity: 1; }
 
 #contact-a .text-fields {
   display: grid;
@@ -389,6 +477,9 @@ img {
 #contact-a button[type="submit"] {
   width: 50%; }
 
+#contact-b .container {
+  border-bottom: 2px #ffbc00 solid; }
+
 #contact-b .contact-info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -407,6 +498,8 @@ img {
     justify-content: space-between;
     height: 5rem;
     align-items: center; }
+    #main-footer .footer-content i {
+      color: white; }
     #main-footer .footer-content .social .fab {
       margin-right: 1rem;
       border: 2px #fff solid;

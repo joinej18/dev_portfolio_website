@@ -99,6 +99,9 @@ input[class^="btn-"]:hover {
   position: relative;
   background: #ffbc00;
   overflow: hidden; }
+  .item a {
+    color: #fff;
+    cursor: help; }
   .item::after {
     position: absolute;
     content: "";
@@ -164,10 +167,9 @@ input[class^="btn-"]:hover {
     margin: 0; }
   .item-category-bottom {
     background: aqua;
-    width: 50%;
+    width: 25%;
     height: 5px;
-    margin: auto;
-    border-radius: 35%; }
+    margin: auto; }
 
 * {
   margin: 0;

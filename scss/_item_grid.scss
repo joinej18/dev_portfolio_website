@@ -5,6 +5,10 @@
 }
 
 .item {
+  a {
+    color: #fff;
+    cursor: help;
+  }
   position: relative;
   background: $main-color;
   overflow: hidden;
@@ -99,9 +103,9 @@
 
   &-category-bottom {
     background: aqua;
-    width: 50%;
+    width: 25%;
     height: 5px;
     margin: auto;
-    border-radius: 35%;
+    // border-radius: 35%;
   }
 }
